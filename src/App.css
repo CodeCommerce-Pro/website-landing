@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'Onest';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./fonts/Onest-VariableFont_wght.ttf');
-  }
+html, body {
+  @apply font-onest;
+}
+
+.px-ccp {
+@apply px-8 md:px-16 lg:px-40
 }

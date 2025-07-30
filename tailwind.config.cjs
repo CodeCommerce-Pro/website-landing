@@ -5,6 +5,8 @@ module.exports = {
     fontFamily: {
       sans: ['Onest', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
+      onest: ["Onest",'sans-serif'],
+
     },
     plugins: [
       require("@tailwindcss/aspect-ratio"),
@@ -12,6 +14,23 @@ module.exports = {
       require("@tailwindcss/typography")
     ],
     extend: {
+      fontSize: {
+      'ccp5xl': ['4rem', {
+        lineHeight: '0.95',
+        letterSpacing: '-0.03em',
+        fontWeight: '500',
+      }],
+      'lgcpp': ['1.125rem', {
+        lineHeight: '1.15',
+        letterSpacing: '-0.03em',
+
+      }],
+      'smcpp': ['1.15rem', {
+        lineHeight: '1.35',
+        letterSpacing: '-0.03em',
+
+      }],
+      },
        borderRadius: {
         '5xl': '500px',
        },
