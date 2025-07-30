@@ -1,6 +1,8 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DotenvPlugin = require('dotenv-webpack');
+
 const SRC_DIR = path.join(__dirname, "..", "src");
 const PUBLIC_DIR = path.resolve(__dirname, "..", "public");
 module.exports = {
@@ -47,5 +49,6 @@ module.exports = {
     template: path.join(PUBLIC_DIR, "index.html"),
     filename: "index.html",
   }),
+  new DotenvPlugin()
   ],
 };
