@@ -6,6 +6,7 @@ import "./App.css"
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { TelegramIcon, Linkedin01Icon } from "hugeicons-react";
 import { Link } from "react-router"
+import { motion } from "motion/react"
 
 function App() {
   
@@ -34,10 +35,14 @@ function App() {
               <img className="absolute left-[calc(10%)] lg:left-0 w-full h-full" src={logo} alt="codecommerce-pro logo" />
             </div>
             <div className="flex flex-col space-y-[80px]  md:pt-32">
-              <div className="text-white text-3xl md:text-ccp5xl lg:max-w-[768px]">
+              <motion.div className="text-white text-3xl md:text-ccp5xl lg:max-w-[768px]"
+               initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{duration:1.5}}
+              >
                 <p>Customer loyalty isn't luck.
                   It's tech, built right.</p>
-              </div>
+              </motion.div>
               <div className="w-full md:w-fit">
                 <button className="px-8 py-5 text-lg bg-white rounded-[500px] leading-tight w-full"
                             onClick={onLetsTalk}>
@@ -74,16 +79,20 @@ function App() {
           </div>
 
         </div>
-        <div className="bg-ccp-light-pink w-full px-ccp  py-14 md:py-44  ">
-          <div className="flex flex-col md:flex-row  justify-center items-baseline space-y-10 md:space-x-20">
+        <div className="bg-ccp-light-pink w-full px-ccp  py-14 md:py-44  "
+                      >
+          <motion.div className="flex flex-col md:flex-row  justify-center items-baseline space-y-10 md:space-x-20"
+           initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{duration:1.5}}>
             <p className="text-lgcpp md:text-3xl text-ccp-pink font-bold   text-wrap">
               Let’s connect and explore how our tailored tech solutions can accelerate your conversion success          </p>
             <button className="px-8 py-5 text-lg bg-ccp-pink text-white rounded-[500px] leading-tight text-nowrap"
             onClick={onLetsTalk}>
               Let's talk
             </button>
+        </motion.div>
           </div>
-        </div>
         <div id="footer" className="bg-ccp-pink py-16 md:py-8 px-ccp">
           <div className="flex flex-col items-start h-20 md:h-28">
             <div className="flex flex-row h-8 md:h-11 gap-4">
