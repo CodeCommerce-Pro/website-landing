@@ -1,4 +1,4 @@
-import React from "react"
+import React, { MouseEvent } from "react"
 import logo from "./logo.svg"
 import company from "./company.svg"
 import FloatingBlock from "./components/FloatingBlock"
@@ -10,8 +10,9 @@ import { motion } from "motion/react"
 
 function App() {
   
-  const onLetsTalk = () => {
-    window.open("https://t.me/Sofia_Leuszewa");
+  const onLetsTalk = (e: MouseEvent) => {
+    window.location.href = "mailto:hello@codecommerce.pro";
+    e.preventDefault()
   }
   
   return (
@@ -44,10 +45,11 @@ function App() {
                   It's tech, built right.</p>
               </motion.div>
               <div className="w-full md:w-fit">
-                <button className="px-8 py-5 text-lg bg-white rounded-[500px] leading-tight w-full"
+                <Link className="px-8 py-5 text-lg bg-white rounded-[500px] leading-tight w-full"
+                to="#"
                             onClick={onLetsTalk}>
                   Let's talk
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -87,10 +89,11 @@ function App() {
                 transition={{duration:1.5}}>
             <p className="text-lgcpp md:text-3xl text-ccp-pink font-bold   text-wrap">
               Let’s connect and explore how our tailored tech solutions can accelerate your conversion success          </p>
-            <button className="px-8 py-5 text-lg bg-ccp-pink text-white rounded-[500px] leading-tight text-nowrap"
+            <Link className="px-8 py-5 text-lg bg-ccp-pink text-white rounded-[500px] leading-tight text-nowrap"
+             to="#"
             onClick={onLetsTalk}>
               Let's talk
-            </button>
+            </Link>
         </motion.div>
           </div>
         <div id="footer" className="bg-ccp-pink py-16 md:py-8 px-ccp">
