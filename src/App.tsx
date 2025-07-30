@@ -55,7 +55,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col bg-red  px-ccp py-14 md:py-44 space-y-6 md:space-y-14 text-left">
+        <div className="flex flex-col  bg-white px-ccp py-14 md:py-44 space-y-6 md:space-y-14 text-left">
           <p className="text-xl md:text-3xl text-ccp-pink font-bold  text-wrap">
             From browsing to buying—we build the tech that turns shoppers into loyal customers
           </p>
